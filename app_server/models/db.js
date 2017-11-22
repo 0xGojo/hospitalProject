@@ -1,7 +1,6 @@
 var mongoose = require('mongoose');
+require('./victims');
 var dbURI = 'mongodb://localhost/hospitalProject';
-mongoose.connect(dbURI);
-
 
 mongoose.connection.on('connected', function () {
    console.log('Mongoose connected to ' + dbURI);

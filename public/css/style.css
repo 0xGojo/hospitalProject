@@ -57,7 +57,8 @@ body a {
 }
 .head-logo{
 	float:left;
-	margin-top: 1em;
+
+	/*margin-top: 0em;*/
 }
 .head-logo a{
 	display:block;
@@ -65,7 +66,8 @@ body a {
 .logo-right{
 	float: right;
 	background: #222222;
-	padding: 1.5em 12em;
+	padding: 1.5em 20em;
+
 }
 .logo-right p{
 	color:#4a4a4a;
