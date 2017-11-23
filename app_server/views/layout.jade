@@ -8,7 +8,7 @@ doctype html
 html
   head
     title
-      | Bệnh viện Liên Chiểu
+      | #{title}
     meta(name='viewport', content='width=device-width, initial-scale=1')
     meta(http-equiv='Content-Type', content='text/html; charset=utf-8')
     meta(name='keywords', content='Viewport Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, \
@@ -60,4 +60,175 @@ html
                 manualControls: '#slider3-pager',
             });
         });
-    block content
+    body
+        include  ./header
+        // //header
+        // bg-banner
+        .bg-banner
+            .banner-bottom-bg
+                .banner-bg
+                    .container
+                        // banner
+                        .banner
+                            .banner-grids
+                                .banner-top
+                                    span.menu MENU
+                                    ul.nav.banner-nav
+                                        li 06 Dec 2010
+                                        li.dropdown1
+                                            a(href='#')
+                                                | Giới thiệu
+                                                span
+                                            ul.dropdown2
+                                                li
+                                                    a(href='lifestyle.html') Lịch sử hình thành
+                                                li
+                                                    a(href='archives.html') Ban giám đốc
+                                                li
+                                                    a(href='fullwidth.html') Sơ đồ tổ chức
+                                                li
+                                                    a(href='contact.html') Đơn vị trực thuộc
+                                        li.dropdown1
+                                            a(href='#')
+                                                | Khoa lâm sàn
+                                                span
+                                            ul.dropdown2
+                                                li
+                                                    a(href='lifestyle.html') Khoa phòng khám
+                                                li
+                                                    a(href='archives.html') Khoa nội tổng hợp
+                                                li
+                                                    a(href='fullwidth.html') Khoa ngoại tổng hợp
+                                                li
+                                                    a(href='contact.html') Khoa nhi
+                                                li
+                                                    a(href='contact.html') Khoa sản
+                                        li.dropdown1
+                                            a(href='#')
+                                                | Khoa cận lâm sàn
+                                                span
+                                            ul.dropdown2
+                                                li
+                                                    a(href='lifestyle.html') Khoa chuẩn đoán hình ảnh
+                                                li
+                                                    a(href='archives.html') Khoa xét nghiệm
+                                                li
+                                                    a(href='fullwidth.html') Khoa dược
+                                                li
+                                                    a(href='contact.html') Khoa kiểm soát NK
+                                        li.dropdown1
+                                            a(href='#')
+                                                | Các phòng chức năng
+                                                span
+                                            ul.dropdown2
+                                                li
+                                                    a(href='lifestyle.html') Phòng TCCB - HTQC
+                                                li
+                                                    a(href='archives.html') Phòng kế hoạch tổng hợp
+                                                li
+                                                    a(href='fullwidth.html') Phòng điều dưỡng
+                                                li
+                                                    a(href='contact.html') Phòng kế toán tài chính
+                                        li.dropdown1
+                                            a(href='#')
+                                                | Thông tin khoa học
+                                                span
+                                            ul.dropdown2
+                                                li
+                                                    a(href='lifestyle.html') Khám chữa bệnh
+                                                li
+                                                    a(href='archives.html') Bảo hiểm
+                                                li
+                                                    a(href='fullwidth.html') Văn bản quản lý hành chính
+                                                li
+                                                    a(href='contact.html') Văn bản quản lý chuyên môn
+                                        li.dropdown1
+                                            a(href='/contact')
+                                                | Liên hệ
+                                                span
+                                    script.
+                                        $("span.menu").click(function () {
+                                            $(" ul.nav").slideToggle("slow", function () {
+                                            });
+                                        });
+                                .banner-middle
+                                    if title == 'Benh vien quan Lien Chieu'
+                                        include ./slide
+                                    // banner-bottom-grids
+                                    .banner-bottom-grids
+                                        // banner-bottom-left
+                                        .col-md-8.banner-bottom-left
+                                            block content
+                                            // //post
+                                        // //banner-bottom-left
+                                        // banner-bottom-right
+                                        .col-md-4.banner-bottom-right
+                                            .banner-bottom-left-grids
+                                                .search
+                                                    form
+                                                        input(type='text', value='to search, type and hit enter', onfocus="this.value = '';", onblur="if (this.value == '') {this.value = 'to search, type and hit enter';}", required='')
+                                                .advertisement
+                                                    h3 Advertisement
+                                                    p 300 x 250
+                                                .sponsors
+                                                    h3 Sponsors
+                                                    .sponsors-grids
+                                                        .sponsors-grid-left
+                                                            .sponsors-grid
+                                                                p 125 x 125
+                                                        .sponsors-grid-left
+                                                            .sponsors-grid
+                                                                p 125 x 125
+                                                        .clearfix
+                                                .video
+                                                    h3 Featured Video
+                                                    iframe(src='https://player.vimeo.com/video/4717303', width='500', height='281', frameborder='0', webkitallowfullscreen='', mozallowfullscreen='', allowfullscreen='')
+                                                .twitter
+                                                    h3 Twitter
+                                                    .twitter-info
+                                                        p
+                                                            | Genesis Child Themes at Theme Garden – December 5th -->
+                                                            a(href='#')
+                                                                | http://bit.ly/ibXdjY #genesiswp
+                                                                span #themegarden
+                                                            span.time
+                                                                a(href='#') 31 minutes ago
+                                                    .twitter-info
+                                                        p
+                                                            | PhotoPro Genesis Child Theme by Creativity Included Launches at
+                                                            a(href='#') http://bit.ly/9fGbq0 - http://eepurl.com/
+                                                            span.time
+                                                                a(href='#') 31 minutes ago
+                                                    .twitter-info
+                                                        p
+                                                            | Latest: Genesis Child Themes at Theme Garden – December 5th - Many of you are aware that Jason Schuller of Press75 r...
+                                                            a(href='#') http://ht.ly/1akn8s
+                                                            span.time
+                                                                a(href='#') 31 minutes ago
+                                                    .twitter-info
+                                                        p
+                                                            | The Rockstar Guide to Getting More Traffic, Fame, and Success -->
+                                                            a(href='#') http://bit.ly/hCzF69
+                                                            span.time
+                                                                a(href='#') 31 minutes ago
+                                                .recent-posts
+                                                    h3 Recent Posts
+                                                    ul
+                                                        li
+                                                            a(href='#') Use Prose to Put the Focus on Your Words
+                                                        li
+                                                            a(href='#') Images Add Life to Your Site
+                                                        li
+                                                            a(href='#') What’s a Framework and Why Do I Need One?
+                                                        li
+                                                            a(href='#') 7 Tips for Capturing Short Attention Spans
+                                                        li
+                                                            a(href='#') Making Your Blog a Great Place to Hang Out
+                                        // banner-bottom-right
+                                        .clearfix
+                                        .up-arrow
+                                            a.scroll(href='#home') Back to Top
+                                    // //banner-bottom-grids
+                        // //banner
+        // //bg-banner
+        include ./footer

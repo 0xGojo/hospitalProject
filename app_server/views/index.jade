@@ -1,430 +1,165 @@
-extends layout
+extends  layout
 
 block content
-  body
-    #home.header
-      .header-bottom
-        // container
-        .container
-          .head-logo
-            a(href='index.html')
-              img(src='images/LOGO-BVLC.png', alt='', height = "130px", width = "150px")
-          .logo-right
-            p Benh vien quan lien chieu xin chao
-          .clearfix
-        // //container
-    // //header
-    // bg-banner
-    .bg-banner
-      .banner-bottom-bg
-        .banner-bg
-          .container
-            // banner
-            .banner
-              .banner-grids
-                .banner-top
-                  span.menu MENU
-                  ul.nav.banner-nav
-                    li 06 Dec 2010
-                    li.dropdown1
-                      a(href='index.html')
-                        | Giới thiệu
-                        span Sơ khai bênh viện
-                      ul.dropdown2
-                        li
-                          a(href='lifestyle.html') Lịch sử hình thành
-                        li
-                          a(href='archives.html') Ban giám đốc
-                        li
-                          a(href='fullwidth.html') Sơ đồ tổ chức
-                        li
-                          a(href='contact.html') Đơn vị trực thuộc
-                    li.dropdown1
-                      a(href='celebrity.html')
-                        | Khoa lâm sàn
-                        span Juicy Hollywood Gossip
-                      ul.dropdown2
-                        li
-                          a(href='lifestyle.html') Khoa phòng khám
-                        li
-                          a(href='archives.html') Khoa nội tổng hợp
-                        li
-                          a(href='fullwidth.html') Khoa ngoại tổng hợp
-                        li
-                          a(href='contact.html') Khoa nhi
-                        li
-                          a(href='contact.html') Khoa sản
-                    li.dropdown1
-                      a(href='celebrity.html')
-                        | Khoa cận lâm sàn
-                        span Juicy Hollywood Gossip
-                      ul.dropdown2
-                        li
-                          a(href='lifestyle.html') Khoa chuẩn đoán hình ảnh
-                        li
-                          a(href='archives.html') Khoa xét nghiệm
-                        li
-                          a(href='fullwidth.html') Khoa dược
-                        li
-                          a(href='contact.html') Khoa kiểm soát NK
-                    li.dropdown1
-                      a(href='404.html')
-                        | Các phòng chức năng
-                        span Apps, Internet & Gadgets
-                      ul.dropdown2
-                        li
-                          a(href='lifestyle.html') Phòng TCCB - HTQC
-                        li
-                          a(href='archives.html') Phòng kế hoạch tổng hợp
-                        li
-                          a(href='fullwidth.html') Phòng điều dưỡng
-                        li
-                          a(href='contact.html') Phòng kế toán tài chính
-                    li.dropdown1
-                      a(href='celebrity.html')
-                        | Thông tin khoa học
-                        span Movies, Music & Reviews
-                      ul.dropdown2
-                        li
-                          a(href='lifestyle.html') Khám chữa bệnh
-                        li
-                          a(href='archives.html') Bảo hiểm
-                        li
-                          a(href='fullwidth.html') Văn bản quản lý hành chính
-                        li
-                          a(href='contact.html') Văn bản quản lý chuyên môn
-                    li.dropdown1
-                      a(href='travel.html')
-                        | Liên hệ
-                        span Travel News, Guides & Tips
-                  script.
-                      $("span.menu").click(function () {
-                          $(" ul.nav").slideToggle("slow", function () {
-                          });
-                      });
-                .banner-middle
-                  .strip
-                  .slider
-                    // Slideshow 3
-                    ul#slider.rslides
-                      li
-                        img(src='images/1.jpg', alt='')
-                      li
-                        img(src='images/2.jpg', alt='')
-                      li
-                        img(src='images/3.jpg', alt='')
-                      li
-                        img(src='images/4.jpg', alt='')
-                      li
-                        img(src='images/5.jpg', alt='')
-                      li
-                        img(src='images/6.jpg', alt='')
-                    // Slideshow 3 Pager
-                    ul#slider3-pager
-                      li
-                        a(href='#')
-                          img(src='images/1c.jpg', alt='')
-                      li
-                        a(href='#')
-                          img(src='images/2c.jpg', alt='')
-                      li
-                        a(href='#')
-                          img(src='images/3c.jpg', alt='')
-                      li
-                        a(href='#')
-                          img(src='images/4c.jpg', alt='')
-                      li
-                        a(href='#')
-                          img(src='images/5c.jpg', alt='')
-                      li
-                        a(href='#')
-                          img(src='images/6c.jpg', alt='')
-                  .strip1
-                  // banner-bottom-grids
-                  .banner-bottom-grids
-                    // banner-bottom-left
-                    .col-md-8.banner-bottom-left
-                      .banner-bottom-left-grids
-                        .col-md-6.banner-left-grid
-                          h3 Tin tức nổi bật
-                          a(href='single.html')
-                            img(src='images/b1.jpg', alt='')
-                          h4
-                            a(href='single.html') Silicon Valley Shows Signs of Dot-Com Frenzy
-                          p.comments
-                            | August 4 2010,
-                            a(href='#') 8 Comments
-                          p.text
-                            | Lorem ipsum ex vix illud nonummy, novum tation et his. At vix scripta patrioque scribentur...
-                          .blog-grids
-                            .blog-grid-left
-                              img(src='images/b6.jpg', alt='')
-                            .blog-grid-right
-                              a(href='single.html') Fly Fishers Serving as Transports for Noxious Little Invaders
-                              p.comments
-                                | August 4 2010,
-                                a(href='#') 8 Comments
-                            .clearfix
-                          .blog-grids
-                            .blog-grid-left
-                              img(src='images/b5.jpg', alt='')
-                            .blog-grid-right
-                              a(href='single.html') Fly Fishers Serving as Transports for Noxious Little Invaders
-                              p.comments
-                                | August 4 2010,
-                                a(href='#') 8 Comments
-                            .clearfix
-                        .col-md-6.banner-left-grid
-                          h3 Hoạt động nổi bật
-                          a(href='single.html')
-                            img(src='images/b2.jpg', alt='')
-                          h4
-                            a(href='single.html') Silicon Valley Shows Signs of Dot-Com Frenzy
-                          p.comments
-                            | August 4 2010,
-                            a(href='#') 8 Comments
-                          p.text
-                            | Lorem ipsum ex vix illud nonummy, novum tation et his. At vix scripta patrioque scribentur...
-                          .blog-grids
-                            .blog-grid-left
-                              img(src='images/b5.jpg', alt='')
-                            .blog-grid-right
-                              a(href='single.html') Fly Fishers Serving as Transports for Noxious Little Invaders
-                              p.comments
-                                | August 4 2010,
-                                a(href='#') 8 Comments
-                            .clearfix
-                          .blog-grids
-                            .blog-grid-left
-                              img(src='images/b6.jpg', alt='')
-                            .blog-grid-right
-                              a(href='single.html') Fly Fishers Serving as Transports for Noxious Little Invaders
-                              p.comments
-                                | August 4 2010,
-                                a(href='#') 8 Comments
-                            .clearfix
-                        .clearfix
-                      .banner-bottom-left-grids
-                        .col-md-6.banner-left-grid
-                          h3 Technology
-                          a(href='single.html')
-                            img(src='images/b3.jpg', alt='')
-                          h4
-                            a(href='single.html') Silicon Valley Shows Signs of Dot-Com Frenzy
-                          p.comments
-                            | August 4 2010,
-                            a(href='#') 8 Comments
-                          p.text
-                            | Lorem ipsum ex vix illud nonummy, novum tation et his. At vix scripta patrioque scribentur...
-                          .blog-grids
-                            .blog-grid-left
-                              img(src='images/b6.jpg', alt='')
-                            .blog-grid-right
-                              a(href='single.html') Fly Fishers Serving as Transports for Noxious Little Invaders
-                              p.comments
-                                | August 4 2010,
-                                a(href='#') 8 Comments
-                            .clearfix
-                          .blog-grids
-                            .blog-grid-left
-                              img(src='images/b5.jpg', alt='')
-                            .blog-grid-right
-                              a(href='single.html') Fly Fishers Serving as Transports for Noxious Little Invaders
-                              p.comments
-                                | August 4 2010,
-                                a(href='#') 8 Comments
-                            .clearfix
-                        .col-md-6.banner-left-grid
-                          h3 Entertainment
-                          a(href='single.html')
-                            img(src='images/b4.jpg', alt='')
-                          h4
-                            a(href='single.html') Silicon Valley Shows Signs of Dot-Com Frenzy
-                          p.comments
-                            | August 4 2010,
-                            a(href='#') 8 Comments
-                          p.text
-                            | Lorem ipsum ex vix illud nonummy, novum tation et his. At vix scripta patrioque scribentur...
-                          .blog-grids
-                            .blog-grid-left
-                              img(src='images/b5.jpg', alt='')
-                            .blog-grid-right
-                              a(href='single.html') Fly Fishers Serving as Transports for Noxious Little Invaders
-                              p.comments
-                                | August 4 2010,
-                                a(href='#') 8 Comments
-                            .clearfix
-                          .blog-grids
-                            .blog-grid-left
-                              img(src='images/b6.jpg', alt='')
-                            .blog-grid-right
-                              a(href='single.html') Fly Fishers Serving as Transports for Noxious Little Invaders
-                              p.comments
-                                | August 4 2010,
-                                a(href='#') 8 Comments
-                            .clearfix
-                        .clearfix
-                      // post
-                      .post
-                        h3 Latest Posts
-                        .post-grids
-                          .col-md-4.post-left
-                            a(href='single.html')
-                              img(src='images/p1.jpg', alt='')
-                          .col-md-8.post-right
-                            h4
-                              a(href='single.html') Silicon Valley Shows Signs of Dot-Com Frenzy
-                            p.comments
-                              | August 4 2010,
-                              a(href='#') 8 Comments
-                            p.text
-                              | Lorem ipsum ex vix illud nonummy, novum tation et his. At vix scripta patrioque scribentur...
-                          .clearfix
-                        .post-grids
-                          .col-md-4.post-left
-                            a(href='single.html')
-                              img(src='images/p2.jpg', alt='')
-                          .col-md-8.post-right
-                            h4
-                              a(href='single.html') Silicon Valley Shows Signs of Dot-Com Frenzy
-                            p.comments
-                              | August 4 2010,
-                              a(href='#') 8 Comments
-                            p.text
-                              | Lorem ipsum ex vix illud nonummy, novum tation et his. At vix scripta patrioque scribentur...
-                          .clearfix
-                        .post-grids
-                          .col-md-4.post-left
-                            a(href='single.html')
-                              img(src='images/p3.jpg', alt='')
-                          .col-md-8.post-right
-                            h4
-                              a(href='#') Silicon Valley Shows Signs of Dot-Com Frenzy
-                            p.comments
-                              | August 4 2010,
-                              a(href='#') 8 Comments
-                            p.text
-                              | Lorem ipsum ex vix illud nonummy, novum tation et his. At vix scripta patrioque scribentur...
-                          .clearfix
-                      // //post
-                    // //banner-bottom-left
-                    // banner-bottom-right
-                    .col-md-4.banner-bottom-right
-                      .banner-bottom-left-grids
-                        .search
-                          form
-                            input(type='text', value='to search, type and hit enter', onfocus="this.value = '';", onblur="if (this.value == '') {this.value = 'to search, type and hit enter';}", required='')
-                        .advertisement
-                          h3 Advertisement
-                          p 300 x 250
-                        .sponsors
-                          h3 Sponsors
-                          .sponsors-grids
-                            .sponsors-grid-left
-                              .sponsors-grid
-                                p 125 x 125
-                            .sponsors-grid-left
-                              .sponsors-grid
-                                p 125 x 125
-                            .clearfix
-                        .video
-                          h3 Featured Video
-                          iframe(src='https://player.vimeo.com/video/4717303', width='500', height='281', frameborder='0', webkitallowfullscreen='', mozallowfullscreen='', allowfullscreen='')
-                        .twitter
-                          h3 Twitter
-                          .twitter-info
-                            p
-                              | Genesis Child Themes at Theme Garden – December 5th -->
-                              a(href='#')
-                                | http://bit.ly/ibXdjY #genesiswp
-                                span #themegarden
-                              span.time
-                                a(href='#') 31 minutes ago
-                          .twitter-info
-                            p
-                              | PhotoPro Genesis Child Theme by Creativity Included Launches at
-                              a(href='#') http://bit.ly/9fGbq0 - http://eepurl.com/
-                              span.time
-                                a(href='#') 31 minutes ago
-                          .twitter-info
-                            p
-                              | Latest: Genesis Child Themes at Theme Garden – December 5th - Many of you are aware that Jason Schuller of Press75 r...
-                              a(href='#') http://ht.ly/1akn8s
-                              span.time
-                                a(href='#') 31 minutes ago
-                          .twitter-info
-                            p
-                              | The Rockstar Guide to Getting More Traffic, Fame, and Success -->
-                              a(href='#') http://bit.ly/hCzF69
-                              span.time
-                                a(href='#') 31 minutes ago
-                        .recent-posts
-                          h3 Recent Posts
-                          ul
-                            li
-                              a(href='#') Use Prose to Put the Focus on Your Words
-                            li
-                              a(href='#') Images Add Life to Your Site
-                            li
-                              a(href='#') What’s a Framework and Why Do I Need One?
-                            li
-                              a(href='#') 7 Tips for Capturing Short Attention Spans
-                            li
-                              a(href='#') Making Your Blog a Great Place to Hang Out
-                    // banner-bottom-right
-                    .clearfix
-                    .up-arrow
-                      a.scroll(href='#home') Back to Top
-                  // //banner-bottom-grids
-            // //banner
-    // //bg-banner
-    .footer
-      // container
-      .container
-        .footer-grids
-          .col-md-3.recent-posts.footer-left
-            h3 Recent Posts
-            ul
-              li
-                a(href='#') Use Prose to Put the Focus on Words
-              li
-                a(href='#') Images Add Life to Your Site
-              li
-                a(href='#') What’s a WordPress theme Framework?
-              li
-                a(href='#') 7 Tips for Short Attention Spans
-              li
-                a(href='#') Make Your Blog a Great Place to Hang
-          .col-md-3.viewport
-            h3 About Viewport
-            p
-              | Donec sed odio dui. Nulla vitae elit libero, a pharetra augue. Nullam id dolor id nibh ultricies vehicula ut id elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.
-              span
-                | Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.
-              |                        Aenean lacinia bibendum nulla sed consectetur. Cras mattis consectetur purus sit amet fermentum.
-              |                        Donec id elit non mi porta gravida at eget metus.
-          .col-md-3.footer-comments
-            h3 Comments
-            ul
-              li
-                | Orman Clark on
-                a(href='#') Sample Post With Threaded Comments
-              li
-                | Orman Clark on
-                a(href='#') Sample Post With Threaded Comments
-              li
-                | Orman Clark on
-                a(href='#') Sample Post With Threaded Comments
-              li
-                | Orman Clark on
-                a(href='#') Sample Post With Threaded Comments
-          .col-md-3.footer-logo
-            a(href='index.html')
-              img(src='images/f-logo.png', alt='')
-            p
-              | Donec sed odio dui. Nulla vitae elit libero, a pharetra augue. Nullam id dolor id nibh ultricies vehicula ut id elit.
-          .clearfix
-          .copyright
-            p
-              | Template by
-              a(href='http://w3layouts.com/') W3layouts
+  .banner-bottom-left-grids
+    .col-md-6.banner-left-grid
+      h3 Tin tức nổi bật
+      a(href='single.html')
+        img(src='images/b1.jpg', alt='')
+      h4
+        a(href='single.html') Silicon Valley Shows Signs of Dot-Com Frenzy
+      p.comments
+        | August 4 2010,
+        a(href='#') 8 Comments
+      p.text
+        | Lorem ipsum ex vix illud nonummy, novum tation et his. At vix scripta patrioque scribentur...
+      .blog-grids
+        .blog-grid-left
+          img(src='images/b6.jpg', alt='')
+        .blog-grid-right
+          a(href='single.html') Fly Fishers Serving as Transports for Noxious Little Invaders
+          p.comments
+            | August 4 2010,
+            a(href='#') 8 Comments
+        .clearfix
+      .blog-grids
+        .blog-grid-left
+          img(src='images/b5.jpg', alt='')
+        .blog-grid-right
+          a(href='single.html') Fly Fishers Serving as Transports for Noxious Little Invaders
+          p.comments
+            | August 4 2010,
+            a(href='#') 8 Comments
+        .clearfix
+    .col-md-6.banner-left-grid
+      h3 Hoạt động nổi bật
+      a(href='single.html')
+        img(src='images/b2.jpg', alt='')
+      h4
+        a(href='single.html') Silicon Valley Shows Signs of Dot-Com Frenzy
+      p.comments
+        | August 4 2010,
+        a(href='#') 8 Comments
+      p.text
+        | Lorem ipsum ex vix illud nonummy, novum tation et his. At vix scripta patrioque scribentur...
+      .blog-grids
+        .blog-grid-left
+          img(src='images/b5.jpg', alt='')
+        .blog-grid-right
+          a(href='single.html') Fly Fishers Serving as Transports for Noxious Little Invaders
+          p.comments
+            | August 4 2010,
+            a(href='#') 8 Comments
+        .clearfix
+      .blog-grids
+        .blog-grid-left
+          img(src='images/b6.jpg', alt='')
+        .blog-grid-right
+          a(href='single.html') Fly Fishers Serving as Transports for Noxious Little Invaders
+          p.comments
+            | August 4 2010,
+            a(href='#') 8 Comments
+        .clearfix
+    .clearfix
+  .banner-bottom-left-grids
+    .col-md-6.banner-left-grid
+      h3 Technology
+      a(href='single.html')
+        img(src='images/b3.jpg', alt='')
+      h4
+        a(href='single.html') Silicon Valley Shows Signs of Dot-Com Frenzy
+      p.comments
+        | August 4 2010,
+        a(href='#') 8 Comments
+      p.text
+        | Lorem ipsum ex vix illud nonummy, novum tation et his. At vix scripta patrioque scribentur...
+      .blog-grids
+        .blog-grid-left
+          img(src='images/b6.jpg', alt='')
+        .blog-grid-right
+          a(href='single.html') Fly Fishers Serving as Transports for Noxious Little Invaders
+          p.comments
+            | August 4 2010,
+            a(href='#') 8 Comments
+        .clearfix
+      .blog-grids
+        .blog-grid-left
+          img(src='images/b5.jpg', alt='')
+        .blog-grid-right
+          a(href='single.html') Fly Fishers Serving as Transports for Noxious Little Invaders
+          p.comments
+            | August 4 2010,
+            a(href='#') 8 Comments
+        .clearfix
+    .col-md-6.banner-left-grid
+      h3 Entertainment
+      a(href='single.html')
+        img(src='images/b4.jpg', alt='')
+      h4
+        a(href='single.html') Silicon Valley Shows Signs of Dot-Com Frenzy
+      p.comments
+        | August 4 2010,
+        a(href='#') 8 Comments
+      p.text
+        | Lorem ipsum ex vix illud nonummy, novum tation et his. At vix scripta patrioque scribentur...
+      .blog-grids
+        .blog-grid-left
+          img(src='images/b5.jpg', alt='')
+        .blog-grid-right
+          a(href='single.html') Fly Fishers Serving as Transports for Noxious Little Invaders
+          p.comments
+            | August 4 2010,
+            a(href='#') 8 Comments
+        .clearfix
+      .blog-grids
+        .blog-grid-left
+          img(src='images/b6.jpg', alt='')
+        .blog-grid-right
+          a(href='single.html') Fly Fishers Serving as Transports for Noxious Little Invaders
+          p.comments
+            | August 4 2010,
+            a(href='#') 8 Comments
+        .clearfix
+    .clearfix
+  // post
+  .post
+    h3 Latest Posts
+    .post-grids
+      .col-md-4.post-left
+        a(href='single.html')
+          img(src='images/p1.jpg', alt='')
+      .col-md-8.post-right
+        h4
+          a(href='single.html') Silicon Valley Shows Signs of Dot-Com Frenzy
+        p.comments
+          | August 4 2010,
+          a(href='#') 8 Comments
+        p.text
+          | Lorem ipsum ex vix illud nonummy, novum tation et his. At vix scripta patrioque scribentur...
+      .clearfix
+    .post-grids
+      .col-md-4.post-left
+        a(href='single.html')
+          img(src='images/p2.jpg', alt='')
+      .col-md-8.post-right
+        h4
+          a(href='single.html') Silicon Valley Shows Signs of Dot-Com Frenzy
+        p.comments
+          | August 4 2010,
+          a(href='#') 8 Comments
+        p.text
+          | Lorem ipsum ex vix illud nonummy, novum tation et his. At vix scripta patrioque scribentur...
+      .clearfix
+    .post-grids
+      .col-md-4.post-left
+        a(href='single.html')
+          img(src='images/p3.jpg', alt='')
+      .col-md-8.post-right
+        h4
+          a(href='#') Silicon Valley Shows Signs of Dot-Com Frenzy
+        p.comments
+          | August 4 2010,
+          a(href='#') 8 Comments
+        p.text
+          | Lorem ipsum ex vix illud nonummy, novum tation et his. At vix scripta patrioque scribentur...
+      .clearfix

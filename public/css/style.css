@@ -52,7 +52,7 @@ body a {
 	color: #787878;
 }
 .header-bottom{
-	background:#2c2c2c;
+	background:#ADFF2F;
 	padding: 3em 0 8em;
 }
 .head-logo{
@@ -69,6 +69,15 @@ body a {
 	padding: 1.5em 20em;
 
 }
+
+.banner-nav .dropdown1 span{
+    padding: 2px;
+}
+.banner-nav .dropdown1{
+    font-size: 15px;
+}
+
+
 .logo-right p{
 	color:#4a4a4a;
 	font-size:12px;
@@ -80,8 +89,8 @@ body a {
 	min-height: 426px;
 }
 .banner-bottom-bg{
-	background:url(../images/strip1.png);
-	min-height: 157em;
+	/*background:url(../images/strip1.png);*/
+	min-height: 120em;
 }
 /*-- banner --*/
 .banner{
@@ -93,7 +102,7 @@ body a {
 }
 .banner-top{
 	padding: 0;
-	border-bottom: solid 6px #202020;
+	border-bottom: solid 6px 	#008000;
 }
 .banner-middle{
 	background:#FFF;
