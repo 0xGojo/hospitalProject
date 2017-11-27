@@ -2,15 +2,12 @@ var mongoose = require('mongoose')
 
 var Schema = mongoose.Schema;
 var victimsSchema = new Schema({
-    name :{ type : String, "default" : "don't know", required : true},
-    address : String,
-    birthDay : Date,
-    Gender :  Number,
-    dayIn : Date,
-    caserecordID : Number,
-    healthInsuranceID : Number,
-    prescriptionID : Number,
-    hospitalFeesID : Number
+    maBN : { type : String, required : true},
+    maBA : { type : String,  required: true},
+    tenBN: { type : String,  required: true},
+    diachi :{ type : String,  required: true},
+    nghenghiep :{ type : String,  required: true},
+    dienthoai : { type : String,  required: true},
 });
 
 
@@ -29,4 +26,4 @@ var victimsSchema = new Schema({
 //     });
 // }
 
-module.exports = mongoose.model('victims', victimsSchema);
+module.exports = mongoose.model('benhnhan', victimsSchema);

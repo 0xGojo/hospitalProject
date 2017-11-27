@@ -1,19 +1,41 @@
 extends  layout
 block content
-    form#contact_form(action='#', method='POST', enctype='multipart/form-data')
-        .row
-            label(for='name') Your name:
-            br
-            input#name.input(name='name', type='text', value='', size='30')
-            br
-        .row
-            label(for='email') Your email:
-            br
-            input#email.input(name='email', type='text', value='', size='30')
-            br
-        .row
-            label(for='message') Your message:
-            br
-            textarea#message.input(name='message', rows='7', cols='30')
-            br
-        input#submit_button(type='submit', value='Send email')
+    .inner.contact
+        // Form Area
+        .contact-form
+            // Form
+            if message != null
+                if message == "success"
+                    h3.success Cảm ơn bạn đã đóng góp ý kiến cho bệnh chúng tôi. Chúng tôi sẽ feedback sớm nhất có thể
+                else
+                    h3.error #{message}
+            h2.Contact-font Liên hệ và đóng góp ý kiến
+            form#contact-us(method='post', action='/contact')
+                // Left Inputs
+                .col-xs-6.wow.animated.slideInLeft(data-wow-delay='.5s')
+                    // Name
+                    input#name.form(type='text', name='name', required='required', placeholder='Name')
+                    // Email
+                    input#mail.form(type='email', name='mail', required='required', placeholder='Email')
+                    // Subject
+                    input#subject.form(type='text', name='subject', required='required', placeholder='Subject')
+                // End Left Inputs
+                // Right Inputs
+                .col-xs-6.wow.animated.slideInRight(data-wow-delay='.5s')
+                    // Message
+                    textarea#message.form.textarea(name='message', placeholder='Message')
+                // End Right Inputs
+                // Bottom Submit
+                .relative.fullwidth.col-xs-12
+                    // Send Button
+                    button#submit.form-btn.semibold(type='submit', name='submit') Send Message
+                // End Bottom Submit
+                // Clear
+                .clear
+            // Your Mail Message
+            .mail-message-area
+                // Message
+                .alert.gray-bg.mail-message.not-visible-message
+                    strong Thank You !
+        // End Contact Form Area
+    // End Inner

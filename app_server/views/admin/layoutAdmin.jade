@@ -11,15 +11,25 @@ head
     link(href='/css/bootstrap.min.css', rel='stylesheet')
     // Animation library for notifications
     link(href='/css/animate.min.css', rel='stylesheet')
+    link(rel='stylesheet', href='/css/reportBox.css', type='text/css')
     // Paper Dashboard core CSS
     link(href='/css/paper-dashboard.css', rel='stylesheet')
     // CSS for Demo Purpose, don't include it in your project
     link(href='/css/demo.css', rel='stylesheet')
+    //link(href='/css/reportBox', rel='stylesheet')
     // Fonts and icons
     link(href='http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css', rel='stylesheet')
     link(href='https://fonts.googleapis.com/css?family=Muli:400,300', rel='stylesheet', type='text/css')
-    link(href='/css/themify-icons.css', rel='stylesheet')
+    link(href='../css/themify-icons.css', rel='stylesheet')
+    script(src='/js/jquery.min.js')
+    script(src='/js/popup.js')
     body
+        .tagGetValue#tagGetValue
+            | #{tag}
+        style
+            |    #tagGetValue{
+            |        display: none;
+            |    }
         .wrapper
             .sidebar(data-background-color='white', data-active-color='danger')
                 //
@@ -30,11 +40,11 @@ head
                         a.simple-text(href='#')
                             | benh vien admin site
                     ul.nav
-                        li.active
+                        li#admin
                             a(href='/admin')
                                 i.ti-panel
                                 p Main
-                        li
+                        li#user
                             a(href='user.html')
                                 i.ti-user
                                 p User Profile
@@ -58,7 +68,18 @@ head
                             a(href='notifications.html')
                                 i.ti-bell
                                 p Notifications
+                        li#contact
+                            a(href='admin/adminContact')
+                                i.ti-text
+                                p Hòm thư
             .main-panel
                 include ./adminHeader
                 block adminContent
                 include ./adminFooter
+    script(type='text/javascript').
+        $(document).ready(function () {
+            var tag = document.getElementById('tagGetValue').innerHTML;
+            var d = document.getElementById(tag);
+            d.className += " active";
+        });
+

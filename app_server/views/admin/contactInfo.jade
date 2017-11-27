@@ -1,0 +1,44 @@
+extends layoutAdmin
+block adminContent
+    .content
+        .container-fluid
+            .row
+                .col-md-12
+                    .card
+                        if message != null
+                            if message == "success"
+                                h3.success Xoa thanh cong
+                            else
+                                h3.error #{message}
+                        .header
+                            h4.title Danh sach dong gop y kien
+                        .content.table-responsive.table-full-width
+                            table.table.table-striped
+                                thead
+                                    th Ten
+                                    th Email
+                                    th Tieu de
+                                    th Noi dung
+                                    th Tra loi
+                                    th Xoa
+                                tbody
+                                    each contact in contacts
+                                        tr
+                                            td #{contact.name}
+                                            td #{contact.email}
+                                            td #{contact.subject}
+                                            td #{contact.message}
+                                            td
+                                                button.button-style reply
+                                            td
+                                                button.button-delete( id = contact._id) Delete
+                            .cd-popup(role='alert')
+                                .cd-popup-container
+                                    p Are you sure you want to delete this element?
+                                    ul.cd-buttons
+                                        li.success
+                                            a.doDeletion(href='#0') Yes
+                                        li.error
+                                            a(href='#0') No
+                                // cd-popup-container
+                            // cd-popup

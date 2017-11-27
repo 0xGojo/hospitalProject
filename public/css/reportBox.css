@@ -1,0 +1,50 @@
+.success {
+    border: 1px solid green;
+    background-color: #d1f9da;
+    color: green;
+}
+
+.error {
+    border: 1px solid red;
+    background-color: #f9b5af;
+    color: red;
+}
+.cd-popup {
+    opacity: 0;
+    display : none;
+    visibility: hidden;
+    transition: opacity 0.3s 0s, visibility 0s 0.3s;
+}
+.button-delete{
+    background-color : red;
+}
+.cd-popup.is-visible {
+    opacity: 1;
+    display : block;
+    visibility: visible;
+    transition: opacity 0.3s 0s, visibility 0s 0s;
+}
+.cd-popup-container {
+    position: absolute;
+    top: 10em;
+    right: 20em;
+    z-index: 1000;
+    width: 90%;
+    max-width: 400px;
+    margin: 4em auto;
+    background: #FFF;
+    padding-bottom: 3em;
+    border : 3px solid;
+    border-radius: .25em .25em .4em .4em;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+.cd-popup-container li{
+    display : block;
+    float: left;
+    width: 40%;
+    margin-right: 10%;
+}
+.is-visible .cd-popup-container {
+    transform: translateY(0);
+}
