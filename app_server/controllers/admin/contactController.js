@@ -16,10 +16,8 @@ module.exports.deleteContact = function(req, res){
         } else  {
             message = 'success';
         };
-        contactDB.find({},function (err, data) {
-            if (!err)
-                res.redirect('/admin/adminContact');
-            else console.log('BUG');
-        });
+
+        res.redirect('/admin/contact?' + message);
+
     });
 };

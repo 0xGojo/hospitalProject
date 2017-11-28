@@ -1,0 +1,46 @@
+extends layoutAdmin
+block adminContent
+    .content
+        .container-fluid
+            .row
+                .col-md-12
+                    .card
+                        if message != null
+                            if message == "success"
+                                h3.success #{message}
+                            else
+                                h3.error #{message}
+                        .col-md-8.col-md-offset-1
+                            form.form-horizontal(method='post', action='/admin/addBenhan')
+                                fieldset
+                                    // Form Name
+                                    legend Dien day du thong tin benh an
+                                    // Text input
+                                    .form-group
+                                        .col-sm-4
+                                            input#MaBN.form-control(type='text', name='MaBN', placeholder='Ma Benh Nhan')
+                                        .col-sm-4
+                                            input#MaBA.form-control(type='text', name='MaBA', placeholder='Ma Benh An')
+                                    // Text input
+                                    .form-group
+                                        .col-sm-4
+                                            input#ngaynhap.form-control(type='date', name="ngaynhap", placeholder='Ngay nhap vien')
+                                        .col-sm-4
+                                            input#ngayxuat.form-control(type='date', name="ngayxuat", placeholder='Date Of Birth')
+                                    // Text input
+                                    .form-group
+                                        .col-sm-8
+                                            input#loaibenh.form-control(type='text', name='loaibenh', placeholder='loai benh')
+                                    .form-group
+                                        .col-sm-8
+                                            input#khoa.form-control(type='text', name='khoa', placeholder='khoa dieu tri')
+                                    .form-group
+                                        .col-sm-4
+                                            input#giuong.form-control(type='text', name='giuong', placeholder='giuong')
+                                    .form-group
+                                        .col-sm-8
+                                            input#bacsi.form-control(type='text', name='bacsi', placeholder='bac si dieu tri')
+                                    .form-group
+                                        .col-sm-8
+                                            input#yta.form-control(type='text', name='yta', placeholder='y ta theo doi')
+                                            button#submit.form-btn.semibold(type='submit', name='submit') Them benh nhan

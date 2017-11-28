@@ -11,8 +11,8 @@ block adminContent
                             else
                                 h3.error #{message}
                         .add-element
-                            a(href='/admin/addBenhnhan')
-                                p Them benh nhan
+                            a(href='/admin/addBenhan')
+                                p Them benh an
                         .header
                             h4.title Danh sach dong gop y kien
                         .content.table-responsive.table-full-width
@@ -20,27 +20,27 @@ block adminContent
                                 thead
                                     th Ma BN
                                     th Ma BA
-                                    th Ten benh nhan
-                                    th Sinh ngay
-                                    th Dia chi
-                                    th Gioi tinh
-                                    th Nghe nghiep
-                                    th Dien thoai
+                                    th Ngay nhap vien
+                                    th Ngay xuat vien
+                                    th Khoa phu trach
+                                    th So giuong
+                                    th Bac si phu trach
+                                    th Y ta dieu duong
                                     th Edit
                                     th Delete
                                 tbody
-                                    each benhnhan in benhnhans
+                                    each benhan in benhans
                                         tr
-                                            td #{benhnhan.maBN}
-                                            td #{benhnhan.maBA}
-                                            td #{benhnhan.tenBN}
-                                            td #{benhnhan.ngaysinh}
-                                            td #{benhnhan.diachi}
-                                            td #{benhnhan.gioitinh}
-                                            td #{benhnhan.nghenghiep}
-                                            td #{benhnhan.dienthoai}
+                                            td #{benhan.maBN}
+                                            td #{benhan.maBA}
+                                            td #{benhan.ngaynhapvien}
+                                            td #{benhan.ngayxuatvien}
+                                            td #{benhan.khoa}
+                                            td #{benhan.giuongnam}
+                                            td #{benhan.bacsichuatri}
+                                            td #{benhan.ytatheodoi}
                                             td
                                                 button.button-style Edit
                                             td
-                                                button.button-delete( id = benhnhan._id) Delete
+                                                button.button-delete( id = benhan._id) Delete
                             include ./popupdelete

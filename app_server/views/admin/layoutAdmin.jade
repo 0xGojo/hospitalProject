@@ -22,7 +22,6 @@ head
     link(href='https://fonts.googleapis.com/css?family=Muli:400,300', rel='stylesheet', type='text/css')
     link(href='../css/themify-icons.css', rel='stylesheet')
     script(src='/js/jquery.min.js')
-    script(src='/js/popup.js')
     body
         .tagGetValue#tagGetValue
             | #{tag}
@@ -44,14 +43,14 @@ head
                             a(href='/admin')
                                 i.ti-panel
                                 p Main
-                        li#user
-                            a(href='user.html')
+                        li#benhnhan
+                            a(href='/admin/benhnhan')
                                 i.ti-user
-                                p User Profile
-                        li
-                            a(href='/admin/victims')
+                                p Benh Nhan
+                        li#benhan
+                            a(href='/admin/benhan')
                                 i.ti-view-list-alt
-                                p Victims
+                                p Benh an
                         li
                             a(href='typography.html')
                                 i.ti-text
@@ -69,13 +68,14 @@ head
                                 i.ti-bell
                                 p Notifications
                         li#contact
-                            a(href='admin/adminContact')
+                            a(href='/admin/contact')
                                 i.ti-text
                                 p Hòm thư
             .main-panel
                 include ./adminHeader
                 block adminContent
                 include ./adminFooter
+    script(src='/js/popup.js')
     script(type='text/javascript').
         $(document).ready(function () {
             var tag = document.getElementById('tagGetValue').innerHTML;
