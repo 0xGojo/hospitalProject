@@ -1,0 +1,38 @@
+extends layoutAdmin
+block adminContent
+    .content
+        .container-fluid
+            .row
+                .col-md-12
+                    .card
+                        if message != null
+                            if message == "success"
+                                h3.success Xoa thanh cong
+                            else
+                                h3.error #{message}
+                        .add-element
+                            a(href='/admin/addLoaithuoc')
+                                p Them benh an
+                        .header
+                            h4.title Danh sach dong gop y kien
+                        .content.table-responsive.table-full-width
+                            table.table.table-hover.table-striped
+                                thead
+                                    th Ma BN
+                                    th Ma BA
+                                    th Ngay nhap vien
+                                    th Ngay xuat vien
+                                    th Edit
+                                    th Delete
+                                tbody
+                                    each loaithuoc in loaithuocs
+                                        tr
+                                            td #{loaithuoc.maBN}
+                                            td #{loaithuoc.maBA}
+                                            td #{loaithuoc.ngaynhapvien}
+                                            td #{loaithuoc.ngayxuatvien}
+                                            td
+                                                button.button-style Edit
+                                            td
+                                                button.button-delete( id = loaithuoc._id) Delete
+                            include ./popupdelete

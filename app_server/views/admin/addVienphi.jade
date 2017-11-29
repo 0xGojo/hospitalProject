@@ -1,0 +1,40 @@
+extends layoutAdmin
+block adminContent
+    .content
+        .container-fluid
+            .row
+                .col-md-12
+                    .card
+                        if message != null
+                            if message == "success"
+                                h3.success #{message}
+                            else
+                                h3.error #{message}
+                        .col-md-8.col-md-offset-1
+                            form.form-horizontal(method='post', action='/admin/addVienphi')
+                                fieldset
+                                    // Form Name
+                                    legend Dien day du thong tin benh an
+                                    // Text input
+                                    .form-group
+                                        .col-sm-4
+                                            input#MaVP.form-control(type='text', name='MaVP', placeholder='Ma vien phi')
+                                        .col-sm-4
+                                            input#MaBN.form-control(type='text', name='MaBN', placeholder='Ma benh nhan')
+                                    // Text input
+                                    .form-group
+                                        .col-sm-4
+                                            input#maDV.form-control(type='date', name="maDV", placeholder='Ma dich vu')
+                                        .col-sm-4
+                                            input#maTT.form-control(type='date', name="maTT", placeholder='Ma toa thuoc')
+                                    // Text input
+                                    .form-group
+                                        .col-sm-8
+                                            input#vienphi.form-control(type='text', name='vienphi', placeholder='Tien vien phi')
+                                    .form-group
+                                        .col-sm-8
+                                            input#khoanthu.form-control(type='text', name='khoanthu', placeholder='khoan thu')
+                                    .form-group
+                                        .col-sm-8
+                                            input#khoandathu.form-control(type='text', name='khoandathu', placeholder='khoa tien da thu')
+                                            button#submit.form-btn.semibold(type='submit', name='submit') Them benh nhan

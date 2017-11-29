@@ -1,0 +1,21 @@
+doctype html
+head
+    meta(charset='utf-8')
+    link(href='/css/login.css', rel='stylesheet')
+    body
+        h2 Login Form
+        if message != null
+            h3(sytle="color :red").error #{message}
+        form(method='post', action='/admin/checkAuthor')
+            .container
+                label
+                    b Username
+                input#uname(type='text', placeholder='Enter Username', name='uname', required='')
+                label
+                    b Password
+                input(type='password', placeholder='Enter Password', name='psw', required='')
+                button(type='submit') Login
+                input(type='checkbox', checked='checked')
+                |  Remember me
+            .container(style='background-color:#f1f1f1')
+                button.cancelbtn(type='button') Cancel

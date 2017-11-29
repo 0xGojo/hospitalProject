@@ -1,0 +1,31 @@
+extends layoutAdmin
+block adminContent
+    .content
+        .container-fluid
+            .row
+                .col-md-12
+                    .card
+                        if message != null
+                            if message == "success"
+                                h3.success #{message}
+                            else
+                                h3.error #{message}
+                        .col-md-8.col-md-offset-1
+                            form.form-horizontal(method='post', action='/admin/addToathuoc')
+                                fieldset
+                                    // Form Name
+                                    legend Dien day du thong tin benh an
+                                    // Text input
+                                .form-group
+                                    .col-sm-4
+                                        input#MaTT.form-control(type='text', name='MaDV', placeholder='Ma loai thuoc')
+                                    .col-sm-4
+                                        input#MaBN.form-control(type='text', name='MaBN', placeholder='Ma ten thuoc')
+                                // Text input
+                                .form-group
+                                    .col-sm-10
+                                        input#MaT.form-control(type='text', name='MaT', placeholder='ma cua cac loai thuoc. Vi du : MT01, MT02,...')
+                                .form-group
+                                    .col-sm-10
+                                        input#quantity.form-control(type='text', name='quantity', placeholder='gia cac loai thuoc tuong ung voi ma thuoc o tren. Vi du : 10.000, 20.000,...')
+                                        button#submit.form-btn.semibold(type='submit', name='submit') Them loai thuoc

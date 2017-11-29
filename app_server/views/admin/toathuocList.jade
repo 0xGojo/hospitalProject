@@ -1,0 +1,37 @@
+extends layoutAdmin
+block adminContent
+    .content
+        .container-fluid
+            .row
+                .col-md-12
+                    .card
+                        if message != null
+                            if message == "success"
+                                h3.success Xoa thanh cong
+                            else
+                                h3.error #{message}
+                        .add-element
+                            a(href='/admin/addToathuoc')
+                                p Them toa thuoc
+                        .header
+                            h4.title Danh sach dong gop y kien
+                        .content.table-responsive.table-full-width
+                            table.table.table-hover.table-striped
+                                thead
+                                    th Ma TT
+                                    th Ma BN
+                                    th Ma ca loai thuoc
+                                    th So luong tuong ung
+                                    th Delete
+                                tbody
+                                    each toathuoc in toathuocs
+                                        tr
+                                            td #{toathuoc.maTT}
+                                            td #{toathuoc.maBN}
+                                            td #{toathuoc.mathuoc}
+                                            td #{toathuoc.soluong}
+                                            td
+                                                button.button-style Edit
+                                            td
+                                                button.button-delete( id = toathuoc._id) Delete
+                            include ./popupdelete

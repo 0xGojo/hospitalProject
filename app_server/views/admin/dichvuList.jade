@@ -1,0 +1,38 @@
+extends layoutAdmin
+block adminContent
+    .content
+        .container-fluid
+            .row
+                .col-md-12
+                    .card
+                        if message != null
+                            if message == "success"
+                                h3.success Xoa thanh cong
+                            else
+                                h3.error #{message}
+                        .add-element
+                            a(href='/admin/addDichvu')
+                                p Them dich vu
+                        .header
+                            h4.title Danh sach dong gop y kien
+                        .content.table-responsive.table-full-width
+                            table.table.table-hover.table-striped
+                                thead
+                                    th Ma DV
+                                    th Ma BN
+                                    th Ten loai dich vu
+                                    th Gia tien
+                                    th Edit
+                                    th Delete
+                                tbody
+                                    each dichvu in dichvus
+                                        tr
+                                            td #{dichvu.maDV}
+                                            td #{dichvu.maBN}
+                                            td #{dichvu.tenDV}
+                                            td #{dichvu.giathanh}
+                                            td
+                                                button.button-style Edit
+                                            td
+                                                button.button-delete( id = dichvu._id) Delete
+                            include ./popupdelete

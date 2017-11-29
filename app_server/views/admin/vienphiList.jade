@@ -1,0 +1,43 @@
+extends layoutAdmin
+block adminContent
+    .content
+        .container-fluid
+            .row
+                .col-md-12
+                    .card
+                        if message != null
+                            if message == "success"
+                                h3.success Xoa thanh cong
+                            else
+                                h3.error #{message}
+                        .add-element
+                            a(href='/admin/addVienphi')
+                                p Them vien phi
+                        .header
+                            h4.title Danh sach dong gop y kien
+                        .content.table-responsive.table-full-width
+                            table.table.table-hover.table-striped
+                                thead
+                                    th Ma VP
+                                    th Ma BN
+                                    th Ma TT
+                                    th Tien vien phi
+                                    th Khoan thu
+                                    th Khoan tien da thu
+                                    th Edit
+                                    th Delete
+                                tbody
+                                    each vienphi in vienphis
+                                        tr
+                                            td #{vienphi.maVP}
+                                            td #{vienphi.maBN}
+                                            td #{vienphi.maDV}
+                                            td #{vienphi.maTT}
+                                            td #{vienphi.vienphi}
+                                            td #{vienphi.khoanthu}
+                                            td #{vienphi.khoandathu}
+                                            td
+                                                button.button-style Edit
+                                            td
+                                                button.button-delete( id = vienphi._id) Delete
+                            include ./popupdelete

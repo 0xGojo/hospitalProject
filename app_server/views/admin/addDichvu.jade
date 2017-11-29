@@ -1,0 +1,31 @@
+extends layoutAdmin
+block adminContent
+    .content
+        .container-fluid
+            .row
+                .col-md-12
+                    .card
+                        if message != null
+                            if message == "success"
+                                h3.success #{message}
+                            else
+                                h3.error #{message}
+                        .col-md-8.col-md-offset-1
+                            form.form-horizontal(method='post', action='/admin/addDichvu')
+                                fieldset
+                                    // Form Name
+                                    legend Dien day du thong tin dich vu
+                                    // Text input
+                                    .form-group
+                                        .col-sm-4
+                                            input#MaDV.form-control(type='text', name='MaDV', placeholder='Ma dich vu')
+                                        .col-sm-4
+                                            input#MaBN.form-control(type='text', name='MaBN', placeholder='Ma benh nhan')
+                                    // Text input
+                                    .form-group
+                                        .col-sm-8
+                                            input#tenDV.form-control(type='text', name='tenDV', placeholder='ten loai dich vu')
+                                    .form-group
+                                        .col-sm-8
+                                            input#price.form-control(type='text', name='yta', placeholder='gia thanh')
+                                            button#submit.form-btn.semibold(type='submit', name='submit') Them dich vu

@@ -5,15 +5,21 @@ var config = require('./config')
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-require('./app_server/models/db');
-require('./app_api/models/db');
 var routes = require('./app_server/routes/index');
 var routesAPI = require('./app_api/routes/index');
 var admin = require('./app_server/routes/admin');
-
+var session = require('express-session')
 var app = express();
 
 var mongoose = require('mongoose');
+var user = require('./app_server/models/user');
+var adminAccount = new user({
+  username : 'admin',
+  password : '123123'
+});
+adminAccount.save(function (err, location) {
+
+});
 // var config = require('./config')
 
 mongoose.connect(config.database, (err, db) => {
@@ -29,6 +35,12 @@ app.set('view engine', 'jade');
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
+//use sessions for tracking logins
+app.use(session({
+    secret: 'work hard',
+    resave: true,
+    saveUninitialized: false,
+}));
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
