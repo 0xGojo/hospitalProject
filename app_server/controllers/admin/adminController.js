@@ -10,24 +10,26 @@ module.exports.login = function(req, res){
 };
 
 module.exports.checkLogin = function(req, res){
-        user.find({username : req.body.uname}, function (err, data) {
-            var err;
-            if (!err) {
-
-                bcrypt.compare("bacon", data.password, function(err, res) {
-                    console.log(res);
-                    debugger
-                    if(!err && res){
-                        req.session.userId = user._id;
-                        return res.redirect('/');
-                    } else {
-                        err = "failed to login"
-                    }
-                });
+        user.findOne({username : req.body.uname}).exec(function (err, data) {
+            console.log(data);
+            var message;
+            if (!err && data) {
+                // var password = req.body.psw;
+                // bcrypt.compare( password, data.password, function(err, res) {
+                //     if(!err){
+                        console.log(data._id);
+                        req.session.userId = data._id;
+                        return res.redirect('/admin');
+                    // } else {
+                    //     message = err;
+                    // }
+                // });
 
             } else {
-                err = new Error('Wrong username or password.' + req.body.uname +  req.body.psw);
+                message = new Error('Wrong username or password.' + req.body.uname +  req.body.psw);
             }
-            res.render('admin/login', { title: 'login', message :err });
+            // res.render('admin/login', { title: 'login', message :message });
+                console.log(data._id);
+                res.redirect('/admin/login');
         });
 };

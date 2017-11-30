@@ -54,7 +54,7 @@ router.get('/logout', function(req, res, next) {
             if(err) {
                 return next(err);
             } else {
-                return res.redirect('/login');
+                return res.redirect('/admin/login');
             }
         });
     }
@@ -66,6 +66,8 @@ function requiresLogin(req, res, next) {
     if (req.session && req.session.userId) {
         return next();
     } else {
+        console.log(req.session);
+        console.log(req.session.userId);
         // var message = "you must be logged in";
         res.redirect('/admin/login');
     }
